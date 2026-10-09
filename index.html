@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Add New Task Section -->
+        <section class="task-form-section">
+            <h1>Add New Task</h1>
+            <form id="taskForm">
+                <label for="taskName">Task Name</label>
+                <input type="text" id="taskName" placeholder="Enter task name" required>
+
+                <label for="taskDescription">Task Description</label>
+                <input type="text" id="taskDescription" placeholder="Enter task description" required>
+
+                <button class="add-btn" type="submit">Add</button>
+            </form>
+        </section>
+
+        <!-- Tasks Table Section -->
+        <section class="tasks-section">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Task Description</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tasksTable"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task!
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Update Task Dialog -->
+    <dialog id="updateDialog" class="update-dialog">
+        <form id="updateForm">
+            <h2>Update Task</h2>
+
+            <label for="updateName">Task Name</label>
+            <input type="text" id="updateName" required>
+
+            <label for="updateDescription">Task Description</label>
+            <input type="text" id="updateDescription" required>
+
+            <div class="dialog-actions">
+                <button class="save-btn" type="submit">
+                    Save Changes
+                </button>
+
+                <button class="cancel-btn" id="cancelUpdate" type="button">
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

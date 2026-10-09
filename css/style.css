@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f6;
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 30px 5%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* Add New Task Section */
+
+.task-form-section {
+    width: 48%;
+    margin: 0 auto 60px;
+    padding: 25px;
+    background-color: #032784;
+    border-radius: 7px;
+}
+
+.task-form-section h1 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.task-form-section label {
+    display: block;
+    margin: 14px 0 8px;
+    font-size: 15px;
+}
+
+.task-form-section input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d5d9e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.task-form-section input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px #00000025;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-btn {
+    margin-top: 14px;
+    background-color: #7b7b7b;
+}
+
+/* Responsive Add New Task Section */
+
+@media (max-width: 900px) {
+    .task-form-section {
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .task-form-section {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 35px;
+    }
+
+    .task-form-section h1 {
+        font-size: 25px;
+    }
+}
+
+/* Tasks Table Section */
+
+.tasks-section {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    background-color: #032784;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #343b49;
+}
+
+th {
+    font-size: 15px;
+    background-color: #15254d;
+}
+
+td {
+    font-size: 15px;
+}
+
+tbody tr:hover {
+    background-color: #7b7b7b;
+}
+
+.status-btn {
+    min-width: 78px;
+}
+
+.status-done {
+    background-color: #abaca9;
+}
+
+.status-created {
+    background-color: hsl(168, 4%, 26%);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-btn {
+    background-color: #7e0d20;
+    padding: 9px 12px;
+}
+
+.update-btn {
+    background-color: #abaca9;
+    color: #fff;
+    padding: 9px 12px;
+}
+
+.empty-message {
+    display: none;
+    color: #333;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Responsive Tasks Table Section */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 4%;
+    }
+
+    th,
+    td {
+        padding: 11px 9px;
+        font-size: 13px;
+    }
+
+    .actions {
+        gap: 5px;
+    }
+
+    .delete-btn,
+    .update-btn {
+        padding: 8px 10px;
+    }
+}
+
+/* Update Dialog Section */
+
+.update-dialog {
+    width: min(460px, calc(100% - 32px));
+    margin: auto;
+    padding: 24px;
+    border: none;
+    border-radius: 9px;
+    background-color: #032784;
+    color: #f8fafc;
+    box-shadow: 0 18px 60px #0005;
+}
+
+.update-dialog::backdrop {
+    background-color: #080b12a8;
+}
+
+.update-dialog h2 {
+    margin-bottom: 14px;
+    font-size: 25px;
+}
+
+.update-dialog label {
+    display: block;
+    margin: 14px 0 8px;
+    font-size: 15px;
+}
+
+.update-dialog input {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d5d9e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.update-dialog input:focus {
+    border-color: #0d6efd;
+}
+
+.dialog-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.save-btn {
+    background-color: #7b7b7b;
+}
+
+.cancel-btn {
+    background-color: #15254d;
+}
+
+/* Responsive Update Dialog Section */
+
+@media (max-width: 480px) {
+    .update-dialog {
+        padding: 18px;
+    }
+
+    .dialog-actions button {
+        flex: 1;
+    }
+}
